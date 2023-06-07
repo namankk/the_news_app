@@ -1,27 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:the_news_app/models/article.dart';
+import 'package:the_news_app/widgets/common_widgets.dart';
+import 'package:the_news_app/widgets/news_tile_widget.dart';
 
 class NewsDetailsPage extends StatelessWidget {
-  const NewsDetailsPage({Key? key}) : super(key: key);
+  final Article article;
+
+  const NewsDetailsPage({Key? key, required this.article}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text("News Details Page")),
-      body: Column(
-        children: [
-          Image.network("https://nypost.com/wp-content/uploads/sites/2/2023/06/newspress-collage-27360230-1686033139004.jpg?quality=75&strip=all&1686018793&w=1024"),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text("Heading of the News"),
-          ),
-          const Padding(
-            padding: EdgeInsets.all(8.0),
-            child: Text("Hundreds of Ukrainians living in villages along the Dnipro River were given less than five hours to evacuate their homes Tuesday after officials say Russian for..."),
-          )
-        ],
+      appBar: mainAppBar(mainAxisAlignment: MainAxisAlignment.start),
+      body: NewsTile(
+        imgUrl: article.imageUrl,
+        title: article.title,
+        desc: article.description,
+        content: article.snippet,
       ),
-      
-
     );
   }
 }

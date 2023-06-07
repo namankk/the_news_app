@@ -16,11 +16,11 @@ class Article {
   });
 
   factory Article.fromJson(Map<String, dynamic> json) => Article(
-    uuid: json["uuid"],
-    title: json["title"],
-    description: json["description"],
-    snippet: json["snippet"],
-    imageUrl: json["image_url"],
-    publishedAt: json["published_at"],
-  );
+        uuid: json["uuid"] ?? "",
+        title: json["title"] ?? "",
+        description: json["description"] ?? "",
+        snippet: json["snippet"] ?? "",
+        imageUrl: json["image_url"] ?? "",
+        publishedAt: json["published_at"] ?? "",
+      );
 }
