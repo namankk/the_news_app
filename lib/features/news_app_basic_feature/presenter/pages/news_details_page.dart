@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:the_news_app/models/article.dart';
-import 'package:the_news_app/widgets/common_widgets.dart';
-import 'package:the_news_app/widgets/news_tile_widget.dart';
+import 'package:the_news_app/features/news_app_basic_feature/data/models/article.dart';
+
+import '../widgets/common_widgets.dart';
+import '../widgets/news_tile_widget.dart';
 
 class NewsDetailsPage extends StatelessWidget {
   final Article article;
