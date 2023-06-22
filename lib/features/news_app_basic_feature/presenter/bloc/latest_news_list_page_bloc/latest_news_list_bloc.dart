@@ -9,7 +9,7 @@ class LatestNewListBloc extends Bloc<LatestNewsEvents,LatestNewsListStates>{
   LatestNewListBloc(this._getListOfArticleUseCase):super(LatestNewsListEmpty()){
     on<OnLatestNewsViewInitialise>((event, emit)async{
       emit(LatestNewsListLoading());
-      final result= await _getListOfArticleUseCase.initializeListScreen();
+      final result= await _getListOfArticleUseCase();
       result.fold((failure) => emit(LatestNewsListError("Something went wrong")), (data) => emit(LatestNewsListHasData(data)));
     });
   }
