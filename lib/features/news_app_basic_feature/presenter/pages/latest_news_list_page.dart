@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:the_news_app/features/news_app_basic_feature/presenter/bloc/latest_news_list_page_bloc/latest_news_list_bloc.dart';
 import 'package:the_news_app/features/news_app_basic_feature/presenter/bloc/latest_news_list_page_bloc/latest_news_list_events.dart';
 import 'package:the_news_app/features/news_app_basic_feature/presenter/bloc/latest_news_list_page_bloc/latest_news_list_states.dart';
 
+import '../../../../core/routes.dart';
 import '../widgets/common_widgets.dart';
 import '../widgets/news_tile_widget.dart';
 
@@ -73,8 +75,10 @@ class LatestNewsListPage extends StatelessWidget {
                     itemBuilder: (context, index) {
                       return GestureDetector(
                         onTap: () {
-                          Navigator.of(context).pushNamed("NewsDetailsPage",
-                              arguments: state.result[index]);
+                          context.goNamed(GoRouteNames.detailsPage,extra:
+                            state.result[index]);
+                          // Navigator.of(context).pushNamed("NewsDetailsPage",
+                          //     arguments: state.result[index]);
                         },
                         child: NewsTile(
                           imgUrl: state.result[index].imageUrl,

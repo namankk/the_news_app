@@ -47,6 +47,8 @@ dependencies:
   equatable: ^2.0.5
   #Service Locator
   get_it: ^7.6.0
+  #Go router for navigation
+  go_router: ^8.1.0
 
 dev_dependencies:
   flutter_test:

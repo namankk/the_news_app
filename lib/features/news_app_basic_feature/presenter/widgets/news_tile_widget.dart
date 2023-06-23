@@ -23,14 +23,14 @@ class NewsTile extends StatelessWidget {
                   bottomRight: Radius.circular(6),
                   bottomLeft: Radius.circular(6))),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: <Widget>[
               ClipRRect(
                 borderRadius: BorderRadius.circular(6),
                 child: Image(
                     image: CachedNetworkImageProvider(imgUrl),
-                    height: 200,
+                    height: MediaQuery.of(context).size.width/100*30,
                     width: MediaQuery.of(context).size.width,
                     fit: BoxFit.cover),
               ),
