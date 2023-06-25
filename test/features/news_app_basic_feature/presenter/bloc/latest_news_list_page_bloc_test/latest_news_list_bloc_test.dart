@@ -23,7 +23,7 @@ void main() {
 
   group("Testing latest news bloc", () {
     final tDataModel = [
-      Article(
+      const Article(
           uuid: "uuid",
           title: "title",
           description: "description",

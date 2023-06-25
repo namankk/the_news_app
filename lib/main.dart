@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:the_news_app/core/routes.dart';
 import 'package:the_news_app/core/service_locator.dart' as di;
+import 'package:the_news_app/features/news_app_basic_feature/presenter/bloc/latest_news_bottom_navigation_bloc/latest_news_bottom_navigation_bloc.dart';
 import 'package:the_news_app/features/news_app_basic_feature/presenter/bloc/latest_news_list_page_bloc/latest_news_list_bloc.dart';
 
 void main() {
@@ -17,7 +18,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MultiBlocProvider(
       providers: [
-        BlocProvider(create: (context)=>di.locator<LatestNewListBloc>())
+        BlocProvider(create: (context)=>di.locator<LatestNewListBloc>()),
+        BlocProvider(create: (context)=>di.locator<LatestNewsBottomNavigationBloc>())
       ],
       child: MaterialApp.router(
         debugShowCheckedModeBanner: false,
