@@ -62,9 +62,9 @@ void arrangeCommon200(){
         return result;
       });
       //Act
-      final r= await remoteDataSource.getDataFromRemoteDataSource;
+      final r= remoteDataSource.getDataFromRemoteDataSource;
       //Assert
-      expect(()=>r(),throwsA(TypeMatcher<DioError>()));
+      expect(()=>r(),throwsA(const TypeMatcher<DioError>()));
     });
   });
 }

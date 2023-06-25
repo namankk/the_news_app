@@ -17,7 +17,7 @@ void main() {
   });
   group("Check repo impl", () {
     List<Article> tListOfArticle = [
-      Article(uuid: "uuid",
+      const Article(uuid: "uuid",
           title: "title",
           description: "description",
           snippet: "snippet",

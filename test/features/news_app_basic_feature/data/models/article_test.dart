@@ -7,7 +7,7 @@ import 'package:the_news_app/features/news_app_basic_feature/domain/entities/art
 import '../../../../fixtures/fixture_reader.dart';
 
 void main() {
-  final tModel = Article(
+  const tModel = Article(
       uuid: "cd9aa142-68eb-4371-a971-2f6a4a4c218b",
       title: "Transfer Talk: Man City to set record to sign Josko Gvardiol",
       description:

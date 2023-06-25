@@ -9,16 +9,16 @@ import 'package:the_news_app/features/news_app_basic_feature/domain/usecase/get_
 class GetListOfArticleRepoTest extends Mock implements GetListOfArticleRepo {}
 
 main() {
-  late GetListOfArticleRepoTest _articleRepo;
-  late GetListOfArticleUseCase _useCase;
+  late GetListOfArticleRepoTest articleRepo;
+  late GetListOfArticleUseCase useCase;
 
   setUp(() {
-    _articleRepo = GetListOfArticleRepoTest();
-    _useCase = GetListOfArticleUseCase(articleRepo: _articleRepo);
+    articleRepo = GetListOfArticleRepoTest();
+    useCase = GetListOfArticleUseCase(articleRepo: articleRepo);
   });
 
   final staticResult = [
-    ArticleEntities(
+    const ArticleEntities(
         uuid: "uuid",
         title: "title",
         description: "description",
@@ -27,18 +27,18 @@ main() {
         publishedAt: "publishedAt")
   ];
   test("GetListOfArticleUseCase should be a subclass of Usecase", () {
-    expect(_useCase, isA<UseCase>());
+    expect(useCase, isA<UseCase>());
   });
 
   test("Test the get list of article usecase", () async {
     //Arrange
-    when(_articleRepo.getListOfArticle)
+    when(articleRepo.getListOfArticle)
         .thenAnswer((invocation) async => Right(staticResult));
     //Act
-    final result=await _useCase();
+    final result=await useCase();
     //Assert
     expect(result, equals(Right(staticResult)));
-    verify(_articleRepo.getListOfArticle);
-    verifyNoMoreInteractions(_articleRepo);
+    verify(articleRepo.getListOfArticle);
+    verifyNoMoreInteractions(articleRepo);
   });
 }

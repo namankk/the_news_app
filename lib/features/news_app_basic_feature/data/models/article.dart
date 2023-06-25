@@ -1,7 +1,7 @@
 import 'package:the_news_app/features/news_app_basic_feature/domain/entities/article_entities.dart';
 
 class Article extends ArticleEntities {
-  Article(
+  const Article(
       {required super.uuid,
       required super.title,
       required super.description,

@@ -7,7 +7,6 @@ import '../features/news_app_basic_feature/presenter/pages/latest_news_list_page
 final appRoutes=GoRouter(initialLocation: "/",routes: [
   GoRoute(path: "/",name: GoRouteNames.listPage,builder: (context,state)=>const LatestNewsListPage()),
   GoRoute(path: "/page2",name: GoRouteNames.detailsPage,builder: (context,state){
-    print(state.queryParameters);
     return NewsDetailsPage(article: state.extra as Article);
   })
 ]);
