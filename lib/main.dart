@@ -4,8 +4,10 @@ import 'package:the_news_app/core/routes.dart';
 import 'package:the_news_app/core/service_locator.dart' as di;
 import 'package:the_news_app/features/news_app_basic_feature/presenter/bloc/latest_news_bottom_navigation_bloc/latest_news_bottom_navigation_bloc.dart';
 import 'package:the_news_app/features/news_app_basic_feature/presenter/bloc/latest_news_list_page_bloc/latest_news_list_bloc.dart';
+import 'package:url_strategy/url_strategy.dart';
 
 void main() {
+  setPathUrlStrategy();
   di.init();
   runApp(const MyApp());
 }
@@ -27,7 +29,7 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        routerConfig: appRoutes,
+        routerConfig: webRoutes,
         // home: const LatestNewsListPage(),
         // onGenerateRoute: (routes) {
         //   switch (routes.name) {

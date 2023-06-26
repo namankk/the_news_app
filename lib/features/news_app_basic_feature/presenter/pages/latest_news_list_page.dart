@@ -26,21 +26,20 @@ class LatestNewsListPage extends StatelessWidget {
               currentIndex: state.currentIndex,
               onTap: (newIndex) {
                 print(newIndex);
-                late NavBarItems navBarItems;
-                switch (newIndex) {
-                  case 0:
-                    navBarItems = NavBarItems.home;
-                    break;
-                  case 1:
-                    navBarItems = NavBarItems.latestNews;
-                    break;
-                  case 2:
-                    navBarItems = NavBarItems.details;
-                    break;
-                }
-                context
-                    .read<LatestNewsBottomNavigationBloc>()
-                    .mapEventWithStates(navBarItems);
+                // late NavBarItems navBarItems;
+                // switch (newIndex) {
+                //   case 0:
+                //     navBarItems = NavBarItems.home;
+                //     break;
+                //   case 1:
+                //     navBarItems = NavBarItems.latestNews;
+                //     break;
+                //   case 2:
+                //     navBarItems = NavBarItems.details;
+                //     break;
+                // }
+
+                context.goNamed(GoRouteNames.detailsSecondPage);
               },
               items: [
                 BottomNavigationBarItem(
@@ -54,7 +53,7 @@ class LatestNewsListPage extends StatelessWidget {
                     label: NavBarItems.details.toString())
               ]);
         } else {
-          return Container();
+          return  const SizedBox.shrink();
         }
       }),
       body: BlocBuilder<LatestNewListBloc, LatestNewsListStates>(
