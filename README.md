@@ -4,11 +4,12 @@ The News App in flutter for Android/Ios/Web
 
  * Clean Architecture
  * Bloc
- * Go router
+ * Go Router
  * Caching for API
  * Service locator (Get it)
  * Dio
  * TDD (Test Driven Development)
+ * Sqflite for storing data
 
    
 
