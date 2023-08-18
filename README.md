@@ -4,7 +4,7 @@ The News App in flutter for Android/Ios/Web
 
  * Clean Architecture
  * Bloc
- * Go Router
+ * Go Router (Navigation 2.0)
  * Caching for API
  * Service locator (Get it)
  * Dio
