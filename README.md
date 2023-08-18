@@ -10,6 +10,7 @@ The News App in flutter for Android/Ios/Web
  * Dio
  * TDD (Test Driven Development)
  * Sqflite for storing data
+   
 
    
 
