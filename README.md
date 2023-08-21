@@ -1,6 +1,6 @@
 # the_news_app
 
-The News App in flutter for Android/Ios/Web
+The News App in flutter for Android/Ios/Web/Mac
 
  * Clean Architecture
  * Bloc
