@@ -2,6 +2,7 @@
 
 The News App in flutter for Android/Ios/Web/Mac
 
+
  * Clean Architecture
  * Bloc/Cubit
  * Go Router (Navigation 2.0)
